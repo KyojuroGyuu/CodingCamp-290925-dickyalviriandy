@@ -1,0 +1,410 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #0a1929 0%, #0d1b2a 100%);
+    color: #e0e0e0;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    border-bottom: 2px solid #1e3a5c;
+}
+
+header h1 {
+    color: #64b5f6;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Content Styles */
+main {
+    background: #1a2b3c;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid #2a4365;
+}
+
+/* Form Styles */
+#todo-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+#todo-form input {
+    flex: 1;
+    min-width: 200px;
+    border: 2px solid #2a4365;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #0f1e2f;
+    color: #e0e0e0;
+}
+
+#todo-form input::placeholder {
+    color: #90a4ae;
+}
+
+#todo-form input:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+    background-color: #132231;
+}
+
+#todo-form button {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 140px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#todo-form button:hover {
+    background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Action Buttons Styles */
+.mt-\[16px\] {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.mt-\[16px\] button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.mt-\[16px\] .bg-red-500 {
+    background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%);
+    color: white;
+}
+
+.mt-\[16px\] .bg-red-500:hover {
+    background: linear-gradient(135deg, #991b1b 0%, #b91c1c 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.mt-\[16px\] .bg-green-500 {
+    background: linear-gradient(135deg, #065f46 0%, #047857 100%);
+    color: white;
+}
+
+.mt-\[16px\] .bg-green-500:hover {
+    background: linear-gradient(135deg, #047857 0%, #059669 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#filter-date {
+    border: 2px solid #2a4365;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 14px;
+    min-width: 180px;
+    background-color: #0f1e2f;
+    color: #e0e0e0;
+}
+
+#filter-date:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+    background-color: #132231;
+}
+
+/* Table Styles */
+#todo-list {
+    margin-top: 25px;
+}
+
+.min-w-full {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Table Header */
+thead {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+}
+
+thead th {
+    color: white;
+    font-weight: 600;
+    text-align: left;
+    padding: 16px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #2a4365;
+}
+
+/* Table Body */
+tbody tr {
+    border-bottom: 1px solid #2a4365;
+    transition: background-color 0.3s ease;
+    background-color: #1e2d3e;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #1a2838;
+}
+
+tbody tr:hover {
+    background-color: #243447;
+}
+
+tbody td {
+    padding: 16px 20px;
+    vertical-align: middle;
+    color: #e0e0e0;
+}
+
+/* Todo Text */
+tbody td:first-child {
+    font-weight: 500;
+    font-size: 16px;
+    color: #f8fafc;
+}
+
+/* Due Date */
+tbody td:nth-child(2) {
+    color: #90a4ae;
+    font-size: 14px;
+}
+
+/* Status Styles */
+.status-pending {
+    color: #fbbf24;
+    font-weight: 600;
+    background-color: rgba(251, 191, 36, 0.1);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    display: inline-block;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.status-completed {
+    color: #10b981;
+    font-weight: 600;
+    background-color: rgba(16, 185, 129, 0.1);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    display: inline-block;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* Action Buttons in Table */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.action-buttons button {
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.complete-btn {
+    background: linear-gradient(135deg, #065f46 0%, #047857 100%);
+    color: white;
+}
+
+.complete-btn:hover {
+    background: linear-gradient(135deg, #047857 0%, #059669 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.delete-btn {
+    background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%);
+    color: white;
+}
+
+.delete-btn:hover {
+    background: linear-gradient(135deg, #991b1b 0%, #b91c1c 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #90a4ae;
+    background-color: #1e2d3e;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.empty-state p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Filter tags styling */
+.filter-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-tag {
+    background-color: #1e3a5c;
+    color: #90cdf4;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #2a4365;
+}
+
+.filter-tag:hover {
+    background-color: #2a4365;
+    transform: translateY(-1px);
+}
+
+.filter-tag.active {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    #todo-form {
+        flex-direction: column;
+    }
+    
+    #todo-form input,
+    #todo-form button {
+        min-width: 100%;
+    }
+    
+    .mt-\[16px\] {
+        flex-direction: column;
+    }
+    
+    .mt-\[16px\] button,
+    #filter-date {
+        min-width: 100%;
+    }
+    
+    /* Responsive table */
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    thead th {
+        padding: 12px 8px;
+        font-size: 12px;
+    }
+    
+    tbody td {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+}
+
+/* Animation for new todos */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.todo-item {
+    animation: slideIn 0.3s ease;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a2b3c;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2a4365;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3182ce;
+}
