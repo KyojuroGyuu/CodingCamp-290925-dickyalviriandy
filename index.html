@@ -6,27 +6,55 @@
     <title>Todo</title>
 
     <!-- CSS External-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <h1>Todo List</h1>
+        <h1 class="text-3xl font-bold">Todo List</h1>
     </header>
 
     <!-- Main Content -->
     <main>
         <!-- Form Todo -->
-        
+        <div>
+            <form id="todo-form">
+                <input type="text" class="border rounded p-[8px]" id="todo-input" placeholder="Enter your todo..."
+                    required>
+                <input type="date" class="border rounded p-[8px]" id="todo-date" required>
+                <button type="button" onclick="addTodo()" class="bg-blue-500 rounded text-white p-[8px]">Add
+                    Todo</button>
+            </form>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="mt-[16px] flex gap-2">
+            <button class="bg-red-500 rounded text-white p-[8px]" onclick="deleteAllTodo()">Delete All</button>
+            <input type="date" id="filter-date" class="border rounded p-[8px]" placeholder="Filter by date">
+            <button class="bg-green-500 rounded text-white p-[8px]" onclick="filterTodo()">Filter Todos</button>
+        </div>
+
+        <!-- List Todo -->
+        <div id="todo-list" class="mt-[16px]">
+            <table class="min-w-full bg-white">
+                <thead>
+                    <tr>
+                        <th class="py-2 px-4 border-b">Todo</th>
+                        <th class="py-2 px-4 border-b">Due Date</th>
+                        <th class="py-2 px-4 border-b">Status</th>
+                        <th class="py-2 px-4 border-b">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="todo-list-body">
+                    <!-- List items will be added here dynamically -->
+                </tbody>
+            </table>
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer></footer>
-
     <!-- Javascript External-->
-    <script scr="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
